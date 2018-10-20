@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0341C3D4216F71F2009A86FC /* SDLoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341C3D3216F71F2009A86FC /* SDLoadingIndicatorView.swift */; };
+		0341C3D4216F71F2009A86FC /* SDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341C3D3216F71F2009A86FC /* SDLoadingView.swift */; };
 		03442B74216E11E000FEA746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03442B73216E11E000FEA746 /* AppDelegate.swift */; };
 		03442B76216E11E000FEA746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03442B75216E11E000FEA746 /* ViewController.swift */; };
 		03442B79216E11E000FEA746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03442B77216E11E000FEA746 /* Main.storyboard */; };
 		03442B7B216E11E100FEA746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03442B7A216E11E100FEA746 /* Assets.xcassets */; };
 		03442B7E216E11E100FEA746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03442B7C216E11E100FEA746 /* LaunchScreen.storyboard */; };
+		0356F4F2217AF5990033020D /* SDLoadingIndicatorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F4F1217AF5990033020D /* SDLoadingIndicatorViewProtocol.swift */; };
+		0356F4F4217AF7320033020D /* SDStandardLoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F4F3217AF7320033020D /* SDStandardLoadingIndicatorView.swift */; };
+		0367D3CD2177668D003B5C94 /* SDLoadingIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0367D3CC2177668D003B5C94 /* SDLoadingIndicatorAnimationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0341C3D3216F71F2009A86FC /* SDLoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLoadingIndicatorView.swift; sourceTree = "<group>"; };
+		0341C3D3216F71F2009A86FC /* SDLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLoadingView.swift; sourceTree = "<group>"; };
 		03442B70216E11E000FEA746 /* SDLoadingViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDLoadingViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03442B73216E11E000FEA746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03442B75216E11E000FEA746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		03442B7A216E11E100FEA746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03442B7D216E11E100FEA746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03442B7F216E11E100FEA746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0356F4F1217AF5990033020D /* SDLoadingIndicatorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLoadingIndicatorViewProtocol.swift; sourceTree = "<group>"; };
+		0356F4F3217AF7320033020D /* SDStandardLoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDStandardLoadingIndicatorView.swift; sourceTree = "<group>"; };
+		0367D3CC2177668D003B5C94 /* SDLoadingIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLoadingIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +46,11 @@
 		0341C3D2216F709A009A86FC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0341C3D3216F71F2009A86FC /* SDLoadingIndicatorView.swift */,
+				0356F4F02178D37A0033020D /* Views */,
+				0367D3C72175BFE4003B5C94 /* Animations */,
+				0341C3D3216F71F2009A86FC /* SDLoadingView.swift */,
+				0367D3CC2177668D003B5C94 /* SDLoadingIndicatorAnimationDelegate.swift */,
+				0356F4F1217AF5990033020D /* SDLoadingIndicatorViewProtocol.swift */,
 			);
 			name = Source;
 			path = ../../../Source;
@@ -74,6 +84,21 @@
 				0341C3D2216F709A009A86FC /* Source */,
 			);
 			path = SDLoadingViewExample;
+			sourceTree = "<group>";
+		};
+		0356F4F02178D37A0033020D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0356F4F3217AF7320033020D /* SDStandardLoadingIndicatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0367D3C72175BFE4003B5C94 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0341C3D4216F71F2009A86FC /* SDLoadingIndicatorView.swift in Sources */,
+				0356F4F2217AF5990033020D /* SDLoadingIndicatorViewProtocol.swift in Sources */,
+				0341C3D4216F71F2009A86FC /* SDLoadingView.swift in Sources */,
+				0367D3CD2177668D003B5C94 /* SDLoadingIndicatorAnimationDelegate.swift in Sources */,
+				0356F4F4217AF7320033020D /* SDStandardLoadingIndicatorView.swift in Sources */,
 				03442B76216E11E000FEA746 /* ViewController.swift in Sources */,
 				03442B74216E11E000FEA746 /* AppDelegate.swift in Sources */,
 			);
