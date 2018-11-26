@@ -9,11 +9,11 @@
 import UIKit
 import Foundation
 
-@objc protocol SDLoadingIndicatorView where Self:UIView{
+@objc protocol SDActivityIndicatorView where Self:UIView{
     func startAnimating()
     func stopAnimating()
 }
 
-@objc protocol SDLoadingIndicatorCustomViewDataSource: NSObjectProtocol{
-    func loadingIndicatorView()->SDLoadingIndicatorView
+@objc protocol SDActivityIndicatorCustomViewDataSource: NSObjectProtocol{
+    func activityIndicatorView()->SDActivityIndicatorView
 }

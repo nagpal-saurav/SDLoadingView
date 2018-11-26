@@ -8,6 +8,6 @@
 
 import UIKit
 
-@objc protocol SDLoadingIndicatorAnimationDelegate: NSObjectProtocol{
+@objc protocol SDActivityIndicatorAnimationDelegate: NSObjectProtocol{
     
 }

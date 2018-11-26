@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SDStandardLoadingIndicatorView: UIView, SDLoadingIndicatorView {
+class SDStandardActivityIndicatorView: UIView, SDActivityIndicatorView {
     //MARK: - IVar
     private let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    
     //MARK: - Life Cycle Method
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,14 +19,16 @@ class SDStandardLoadingIndicatorView: UIView, SDLoadingIndicatorView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        self.prepareActivityIndicatorView()
     }
     
     //MARK: - Setup Activity View
     func prepareActivityIndicatorView(){
-        activityIndicatorView.hidesWhenStopped = true;
-        activityIndicatorView.activityIndicatorViewStyle  = UIActivityIndicatorViewStyle.gray;
-        activityIndicatorView.center = self.center;
+        self.addSubview(self.activityIndicatorView)
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.activityIndicatorViewStyle  = UIActivityIndicatorViewStyle.gray
+        activityIndicatorView.setViewInCenterToView(self, withSize: frame.size)
     }
     
     //MARK: - Loading Animation Delegate
